@@ -1,5 +1,9 @@
+.features-section {
+  padding-top: 60px;
+}
+
 .features-list-item {
-  width: 100%;
+  width: 450px;
 
   &:not(:last-child) {
     margin-bottom: 30px;
@@ -35,32 +39,83 @@
   color: var(--description-color);
 }
 
-//.features-list {
-//  display: flex;
-//}
+@media screen and (min-width: 768px) {
+  .features-section {
+    padding-top: 60px;
+  }
+  .features-list {
+    display: flex;
+  }
 
-//.features-list-item {
-//width: 450px;
+  .features-list-item {
+    width: 354px;
 
-//&:not(:last-child) {
-//margin-right: 30px;
-//}
-//}
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+  }
 
-//.features-list-item-name {
-//margin-bottom: 10px;
+  .features-list-icon-container {
+    background: var(--gray-color);
+    border-radius: 4px;
+    width: 354px;
+    height: 120px;
+    padding: 25px 142px;
+    margin-bottom: 30px;
+  }
 
-//font-weight: 700;
-//font-size: 14px;
-//line-height: 1.143;
-//letter-spacing: 0.03em;
-//text-transform: uppercase;
-//}
+  .features-list-item-name {
+    margin-bottom: 10px;
+    text-align: left;
+  }
 
-//.features-list-item-description {
-//font-weight: 400;
-//font-size: 14px;
-//line-height: 1.714;
-//letter-spacing: 0.03em;
-//color: var(--description-color);
-//}
+  .features-list-item-description {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-section {
+    padding-top: 94px;
+  }
+
+  .features-list {
+    display: flex;
+  }
+
+  .features-list-item {
+    width: 270px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  .features-list-icon-container {
+    display: flex;
+    background: var(--gray-color);
+    border-radius: 4px;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    padding: 25px 100px;
+  }
+
+  .features-list-item-name {
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .features-list-item-description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    color: var(--description-color);
+  }
+}
