@@ -1,0 +1,35 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.img {
+  display: block;
+}
+
+.button {
+  display: inline-block;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-list-item,
+.address-list-item,
+.contacts-list-item,
+.features-list-item,
+.whatwedo-list-item,
+.ourteam-list-item,
+.buttons-list-item,
+.project-item {
+  list-style-type: none;
+}
