@@ -1,33 +1,3 @@
-.our-clients-title {
-  margin-bottom: 50px;
-}
-
-.our-clients-list {
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.our-clients-list-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 19px 41px;
-  width: 170px;
-  height: 90px;
-  border: 1px solid var(--icon-color);
-  box-sizing: border-box;
-  border-radius: 4px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    border-color: var(--accent-color);
-  }
-}
-
 .our-clients-link-icon {
   fill: var(--icon-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -39,31 +9,86 @@
 }
 
 .logo-1 {
-  width: 45px;
   height: 50px;
 }
 
 .logo-2 {
-  width: 40px;
   height: 52px;
 }
 
 .logo-3 {
-  width: 41px;
   height: 43px;
 }
 
 .logo-4 {
-  width: 80px;
   height: 42px;
 }
 
 .logo-5 {
-  width: 59px;
   height: 47px;
 }
 
 .logo-6 {
-  width: 89px;
   height: 45px;
+}
+
+.our-clients-title {
+  margin-bottom: 30px;
+}
+
+.our-clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.our-clients-list-item {
+  width: calc(100% / 2 - 15px);
+  margin-bottom: 30px;
+  overflow: hidden;
+
+  &:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+}
+
+.our-clients-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .our-clients-list-item {
+    width: calc(100% / 3 - 30px);
+    margin-bottom: 30px;
+    overflow: hidden;
+
+    &:not(:nth-child(3n)) {
+      margin-right: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-clients-title {
+    margin-bottom: 50px;
+  }
+
+  .our-clients-list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 }
