@@ -114,16 +114,27 @@ ul {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.1);
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 93px 15px;
   overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
   display: none;
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1) 750ms;
 }
 
 .modal {
+  position: relative;
   background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   padding: 20px;
 }
 
@@ -254,7 +265,7 @@ ul {
 
 .check-box {
   position: absolute;
-  top: 50%;
+  top: 25%;
   transform: translateY(-50%);
   width: 16px;
   height: 15px;
@@ -294,14 +305,50 @@ ul {
   cursor: pointer;
 }
 
+@media screen and (min-width: 477px) {
+  .check-box {
+    top: 50%;
+  }
+}
+
 @media screen and (min-width: 768px) {
+  .backdrop {
+    position: fixed;
+    padding: 208px 159px;
+    overflow-y: scroll;
+  }
+  .modal {
+    position: relative;
+    height: 609px;
+  }
+  .check-box {
+    position: absolute;
+    top: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
   .modal {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
+    width: 528px;
     min-height: 581px;
-    max-width: 450px;
+  }
+  .we-call-you {
+    line-height: 1.15;
+  }
+  .order-service-text {
+    font-size: 14px;
+    line-height: 1.71;
   }
 }
 
@@ -413,6 +460,7 @@ ul {
 }
 
 .navigation-list-link {
+  position: relative;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.167;
@@ -471,12 +519,13 @@ ul {
 .current::after {
   content: "";
   display: block;
-  bottom: -8px;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
   width: 100%;
   height: 4px;
   background-color: var(--accent-color);
   border-radius: 2px;
-  position: relative;
 }
 
 @media screen and (min-width: 768px) {
@@ -561,7 +610,12 @@ ul {
   .current::after {
     content: "";
     display: block;
-    bottom: -28px;
+    bottom: -27px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    position: relative;
   }
 }
 
@@ -1293,13 +1347,15 @@ ul {
   .logo {
     text-align: left;
   }
+  .logo-links {
+    margin-right: 70px;
+  }
   .footer-blocks {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
   }
   .contacts-list {
-    margin-right: 70px;
     text-align: left;
     width: 231px;
     height: 81px;
@@ -1332,6 +1388,7 @@ ul {
   }
   .follow-us-input {
     margin-right: 12px;
+    margin-bottom: 0px;
   }
 }
 /*# sourceMappingURL=main.css.map */
