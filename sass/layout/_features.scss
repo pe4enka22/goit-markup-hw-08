@@ -51,7 +51,8 @@
   }
 
   .features-list-item {
-    width: calc(100% / 2 - 30px);
+    width: 354px;
+    height: 251px;
 
     &:nth-child(2n + 1) {
       margin-right: 30px;
