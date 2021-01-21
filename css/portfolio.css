@@ -118,7 +118,6 @@ ul {
 }
 
 .menu-button {
-  display: inline-flex;
   padding: 0;
   margin: 0;
   border: none;
@@ -169,6 +168,7 @@ ul {
 
 .menu-container.is-open {
   display: block;
+  z-index: 20;
 }
 
 .logo {
@@ -578,6 +578,11 @@ ul {
     align-items: baseline;
     justify-content: space-between;
   }
+  .follow-us-input {
+    width: 450px;
+    margin-left: 166px;
+    margin-right: 152px;
+  }
   .logo-links {
     margin-right: 165px;
   }
@@ -629,6 +634,7 @@ ul {
   .follow-us-input {
     margin-right: 12px;
     margin-bottom: 0px;
+    margin-left: 0;
   }
 }
 
@@ -670,7 +676,6 @@ ul {
 }
 
 .project-item {
-  height: 404px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -781,7 +786,6 @@ ul {
   }
   .project-item {
     flex-basis: calc(100% / 3 - 30px);
-    height: 404px;
     margin-left: 30px;
   }
   .project-item-img {

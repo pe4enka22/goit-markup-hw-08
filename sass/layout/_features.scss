@@ -7,12 +7,16 @@
   &:not(:last-child) {
     margin-bottom: 30px;
   }
+  &:last-child {
+    margin-bottom: 60px;
+  }
 }
 
 .features-list-icon-container {
   background: var(--gray-color);
   border-radius: 4px;
   height: 120px;
+  width: 450px;
   margin-bottom: 30px;
   padding: 25px 190px;
   overflow: hidden;
@@ -58,6 +62,7 @@
     background: var(--gray-color);
     border-radius: 4px;
     height: 120px;
+    width: 354px;
     padding: 25px 142px;
     margin-bottom: 30px;
   }

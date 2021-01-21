@@ -9,7 +9,6 @@
 }
 
 .menu-button {
-  display: inline-flex;
   padding: 0;
   margin: 0;
   border: none;
@@ -62,6 +61,7 @@
 
   &.is-open {
     display: block;
+    z-index: 20;
   }
 }
 
