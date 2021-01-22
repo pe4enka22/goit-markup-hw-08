@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --main-color: #212121;
   --accent-color: #2196f3;
@@ -21,6 +22,18 @@ body {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 h1,
@@ -1151,12 +1164,16 @@ ul {
 @media screen and (min-width: 768px) {
   .container.clients {
     width: 100%;
+    overflow-x: hidden;
+    /*для горизонтального*/
+    overflow: hidden;
   }
   .our-clients-list-item {
     width: 226px;
     height: 90px;
     margin-bottom: 30px;
     margin-right: 30px;
+    overflow: hidden;
   }
   .our-clients-list-item:nth-child(3n) {
     margin-right: 0;
